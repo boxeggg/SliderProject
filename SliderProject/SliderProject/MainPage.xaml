@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SliderProject.MainPage"
+             Padding="20">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android" Value="20,30,20,20" />
+            <On Platform="Windows" Value="20,40,20,20" />
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <StackLayout VerticalOptions="Start" >
+        <Label x:Name="SliderValueLabel" Text="Font size: 16" FontSize="16" TextColor="Black" ></Label>
+        <Slider x:Name="Slider" Maximum="50" Minimum="16" ValueChanged="Slider_ValueChanged" ></Slider>
+        <Label x:Name="quotesLabel" FontSize="16" TextColor="Black"></Label>
+        
+    </StackLayout>
+
+</ContentPage>
